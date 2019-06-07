@@ -11,6 +11,12 @@
       notify:
         - restart systemd-logind
       become: yes
+      
+    - name: install rfkill
+      package:
+        name: rfkill
+        state: present
+      become: yes
 
     - name: install Docker
       include_role:
@@ -21,9 +27,11 @@
       vars:
         docker_users:
           - hsop
+
   handlers:
     - name: restart systemd-logind
       service:
         name: systemd-logind
         state: restarted 
       become: yes
+      
