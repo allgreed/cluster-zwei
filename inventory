@@ -1,7 +1,7 @@
 [all]
-host0 ansible_host=192.168.88.22 mac=f0:4d:a2:ae:fb:6e
-host1 ansible_host=192.168.88.21 mac=f0:4d:a2:cf:aa:e0
-host2 ansible_host=192.168.88.23 mac=f0:4d:a2:d2:68:80
+10.14.10.135 name=host0 mac=f0:4d:a2:cf:aa:e0
+10.14.10.12  name=host1 mac=f0:4d:a2:ae:fb:6e
+10.14.10.115 name=host2 mac=f0:4d:a2:d2:68:80
 
 [all:vars]
 ansible_user=hsop
